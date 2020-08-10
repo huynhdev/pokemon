@@ -12,7 +12,8 @@ export default function ListPokemons(props) {
   const [listItems, setListItems] = useState([]);
 
   useEffect(() => {
-    setListItems(pokemons.slice(0, PER))
+    setListItems(pokemons.slice(0, PER));
+    setPage(1);
   }, [pokemons])
 
   const [page, setPage] = useState(1);
